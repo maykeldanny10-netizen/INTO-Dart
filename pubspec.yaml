@@ -1,0 +1,4 @@
+name: lyrics_terminal
+description: Letras sincronizadas con musica en la terminal.
+environment:
+  sdk: ">=3.0.0 <4.0.0"
