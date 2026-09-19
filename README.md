@@ -1,36 +1,108 @@
 # INTO-Dart
 
-## Letras sincronizadas en la terminal
+Repositorio personal para practicar y aprender Dart desde cero. Aquí estoy creando pequeños programas de consola para entender conceptos básicos como entrada de usuario, condicionales, ciclos, variables, aleatoriedad y reproducción de audio.
 
-El programa `lyrics.dart` muestra las letras caracter por caracter mientras
-reproduce un archivo de audio local con `ffplay`.
+## Objetivo del repositorio
 
-### Requisitos
+Aprender paso a paso la lógica de programación con Dart y preparar la base para proyectos más grandes, incluyendo desarrollo con Flutter en el futuro.
 
-- Dart SDK 3 o superior.
-- `ffplay` instalado y disponible en el `PATH`.
-- Un archivo de audio llamado `musica.mp3` en la raiz del proyecto.
+## Proyectos incluidos
 
-En Linux, `ffplay` suele instalarse junto con FFmpeg.
+### 1. lyrics.dart
+Proyecto de letras sincronizadas en la terminal.
 
-### Ejecutar
+- Muestra cada letra poco a poco para simular una canción.
+- Reproduce un archivo de audio local con `ffplay`.
+- Permite ajustar el inicio y fin de la reproducción por segundos.
+- Ideal para practicar `async`, `await`, `for`, `stdout.write()` y procesos del sistema.
+
+Ejecutar:
 
 ```bash
-dart pub get
 dart run lyrics.dart
 ```
 
-### Ajustar el fragmento
+Requisitos:
 
-En `lyrics.dart`, modifica estos valores:
+- Dart SDK instalado
+- `ffplay` disponible en el sistema
+- archivo `musica.mp3` en la raíz del proyecto
 
-```dart
-const segundoInicial = 41;
-const segundoFinal = 82;
+### 2. programa.dart
+Programa de validación de edad.
+
+- Pide la edad al usuario.
+- Lee la entrada desde la terminal.
+- Convierte el texto a entero con `int.parse()`.
+- Muestra si la persona es menor o mayor de edad.
+
+Ejecutar:
+
+```bash
+dart run programa.dart
 ```
 
-Los valores estan expresados en segundos. Por ejemplo, `82` equivale a
-`1:22`.
+### 3. programa2.dart
+Programa de tabla de multiplicar.
 
-El MP3 se mantiene local y no se incluye en Git. Si usas otro nombre de
-archivo, cambia `archivoMusica` en `lyrics.dart`.
+- Pide un número al usuario.
+- Recorre del 1 al 13 con un ciclo `for`.
+- Muestra la tabla de multiplicar del número elegido.
+
+Ejecutar:
+
+```bash
+dart run programa2.dart
+```
+
+### 4. juego.dart
+Juego de adivinanza de números.
+
+- Genera un número aleatorio con `Random()`.
+- El usuario intenta adivinarlo.
+- El juego da pistas si el número es mayor o menor.
+- Se repite con `while` hasta que el usuario acierte.
+
+Ejecutar:
+
+```bash
+dart run juego.dart
+```
+
+## Conceptos que se practican en este repositorio
+
+- Variables: `String`, `int`, `double`, `bool`
+- Entrada de usuario con `stdin.readLineSync()`
+- Conversión de texto a número con `int.parse()`
+- Condicionales: `if`, `else if`, `else`
+- Ciclos: `for` y `while`
+- Aleatoriedad con `dart:math`
+- Programación asíncrona: `async`, `await`, `Future.delayed()`
+- Uso de archivos y procesos del sistema
+
+## Recomendación de aprendizaje
+
+Este repositorio es una base muy buena para seguir aprendiendo:
+
+1. dominar Dart básico
+2. crear juegos de consola
+3. practicar lógica y condiciones
+4. pasar a Flutter con widgets y diseño
+
+## Como ejecutar cualquier archivo
+
+Desde la carpeta del proyecto:
+
+```bash
+dart run nombre_del_archivo.dart
+```
+
+Ejemplo:
+
+```bash
+dart run juego.dart
+```
+
+## Nota personal
+
+Estos proyectos son ejercicios de aprendizaje. La idea es entender la lógica antes de pasar a interfaces gráficas con Flutter. Cada archivo es una pequeña prueba que va construyendo habilidades prácticas.
